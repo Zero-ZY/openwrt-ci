@@ -19,6 +19,14 @@ rm -rf feeds/luci/applications/luci-app-mosdns
 rm -rf feeds/luci/applications/luci-app-netdata
 rm -rf feeds/luci/applications/luci-app-serverchan
 
+# Add a feed source
+# Add kiddin9
+# echo "src-git kiddin9 https://github.com/kiddin9/openwrt-packages.git" >> "feeds.conf.default"
+#
+# Add shidahuilang
+echo "src-git shidahuilang https://github.com/shidahuilang/openwrt-package.git" >> "feeds.conf.default"
+#
+
 # Git稀疏克隆，只克隆指定目录到本地
 function git_sparse_clone() {
   branch="$1" repourl="$2" && shift 2
@@ -39,6 +47,20 @@ git clone --depth=1 https://github.com/Jason6111/luci-app-netdata package/luci-a
 git_sparse_clone main https://github.com/Lienol/openwrt-package luci-app-filebrowser luci-app-ssr-mudb-server
 git_sparse_clone openwrt-18.06 https://github.com/immortalwrt/luci applications/luci-app-eqos
 # git_sparse_clone master https://github.com/syb999/openwrt-19.07.1 package/network/services/msd_lite
+
+#增加插件
+#luci-app-romupdate
+git clone -b dev https://github.com/Blueplanet20120/luci-app-romupdate.git
+#luci-theme-design
+git clone https://github.com/kenzok78/luci-theme-design.git
+#luci-theme-neobird
+git clone https://github.com/thinktip/luci-theme-neobird.git
+#aliyundrive-webdav
+git clone https://github.com/messense/aliyundrive-webdav.git
+#luci-app-frpc
+git clone https://github.com/kuoruan/luci-app-frpc.git
+#luci-app-easytier
+ git clone https://github.com/EasyTier/luci-app-easytier.git
 
 # 科学上网插件
 #git clone --depth=1 -b main https://github.com/fw876/helloworld package/luci-app-ssr-plus
