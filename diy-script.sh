@@ -8,6 +8,8 @@
 
 # TTYD 免登录
 # sed -i 's|/bin/login|/bin/login -f root|g' feeds/packages/utils/ttyd/files/ttyd.config
+# TTYD 拒绝链接问题
+sed -i 's|${interface:+-i $interface} \|#${interface:+-i $interface} \|g' feeds/packages/utils/ttyd/files/ttyd.init
 
 # 移除要替换的包
 rm -rf feeds/packages/net/mosdns
