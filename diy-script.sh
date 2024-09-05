@@ -29,14 +29,14 @@ rm -rf feeds/luci/applications/luci-app-serverchan
 echo "src-git shidahuilang https://github.com/shidahuilang/openwrt-package.git" >> "feeds.conf.default"
 #
 
-#easytier核心
-mkdir -p files/usr/bin
-wget -qO- -t1 -T2 "https://api.github.com/repos/EasyTier/EasyTier/releases" | grep "tag_name" | head -n 1 | awk -F ":" '{print $2}' | sed 's/\"//g;s/,//g;s/ //g'  > files/usr/bin/easytier_version
-easytier_version=`cat files/usr/bin/easytier_version`
-wget -qO files/usr/bin/easytier.zip https://github.com/EasyTier/EasyTier/releases/download/${easytier_version}/easytier-linux-arm-${easytier_version}.zip
-unzip -j easytier.zip -d files/usr/bin
-rm -rf  files/usr/bin/easytier.zip
-rm -rf  files/usr/bin/easytier_version
+#easytier核心测试
+# mkdir -p files/usr/bin
+# wget -qO- -t1 -T2 "https://api.github.com/repos/EasyTier/EasyTier/releases" | grep "tag_name" | head -n 1 | awk -F ":" '{print $2}' | sed 's/\"//g;s/,//g;s/ //g'  > files/usr/bin/easytier_version
+# easytier_version=`cat files/usr/bin/easytier_version`
+# wget -qO files/usr/bin/easytier.zip https://github.com/EasyTier/EasyTier/releases/download/${easytier_version}/easytier-linux-arm-${easytier_version}.zip
+# unzip -j easytier.zip -d files/usr/bin
+# rm -rf  files/usr/bin/easytier.zip
+# rm -rf  files/usr/bin/easytier_version
 
 # Git稀疏克隆，只克隆指定目录到本地
 function git_sparse_clone() {
