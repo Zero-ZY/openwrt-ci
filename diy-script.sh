@@ -71,7 +71,9 @@ git clone https://github.com/messense/aliyundrive-webdav.git
 #luci-app-frpc
 git clone https://github.com/kuoruan/luci-app-frpc.git
 #luci-app-easytier
- git clone https://github.com/EasyTier/luci-app-easytier.git
+git clone https://github.com/EasyTier/luci-app-easytier.git
+#luci-app-ddns-go
+git clone https://github.com/sirpdboy/luci-app-ddns-go.git
 
 # 科学上网插件
 #git clone --depth=1 -b main https://github.com/fw876/helloworld package/luci-app-ssr-plus
