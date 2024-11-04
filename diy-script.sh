@@ -67,13 +67,15 @@ git clone https://github.com/kenzok78/luci-theme-design.git
 #luci-theme-neobird
 git clone https://github.com/thinktip/luci-theme-neobird.git
 #aliyundrive-webdav
-git clone https://github.com/messense/aliyundrive-webdav.git
+#git clone https://github.com/messense/aliyundrive-webdav.git
 #luci-app-frpc
 git clone https://github.com/kuoruan/luci-app-frpc.git
 #luci-app-easytier
 git clone https://github.com/EasyTier/luci-app-easytier.git
 #luci-app-ddns-go
 git clone https://github.com/sirpdboy/luci-app-ddns-go.git
+#luci-app-bandwidthd
+git clone https://github.com/AlexZhuo/luci-app-bandwidthd.git
 
 # 科学上网插件
 #git clone --depth=1 -b main https://github.com/fw876/helloworld package/luci-app-ssr-plus
